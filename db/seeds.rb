@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
-for i in 1..48
+for i in 1..24
   first_name = Faker::Name.first_name
   last_name = Faker::Name.last_name
   name = "#{first_name} #{last_name}"
@@ -23,7 +23,7 @@ for i in 1..48
   user.country = Faker::Address.country
 
   if user.save
-    for ii in 1..48
+    for ii in 1..24
       micropost = Micropost.new
       micropost.user = user
       micropost.message = Faker::Lorem.paragraph
